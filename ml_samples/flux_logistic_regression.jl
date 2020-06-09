@@ -58,6 +58,9 @@ accuracy(x, y, model) = mean(onecold(model(x)) .== onecold(y))
 
 
 function train(; kws...)
+    """
+    This function is very similar to how the keras functional api works
+    """
     # initialise the hyperparameters
     args = Args()
     train_data, test_data = load_iris_data(args)
